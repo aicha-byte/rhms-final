@@ -13,14 +13,21 @@ import MailIcon from '@mui/icons-material/Mail';
 import Link from '@mui/material/Link';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { width } from '@mui/system';
+import { useParams } from 'react-router-dom';
+
+
 
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
-    
+
      left: false,
   });
 
+const location=useParams()
+console.log(location);
+localStorage.setItem('userId',location.id)
+const userId=localStorage.getItem('userId')
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -51,8 +58,8 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
-              <Link href= "/ProfilUser/:id">
-                <ListItemText primary="ProfilUsers" />
+              <Link href= {`/ProfilUser/${userId}`}>
+                <ListItemText primary="Votre Profil" />
               </Link>
             </ListItemButton>
           </ListItem>
@@ -62,7 +69,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
-              <Link href= "/congé">
+              <Link href= {`/congé/${userId}`}>
                 <ListItemText primary="Demande de congé" />
               </Link>
             </ListItemButton>
@@ -82,7 +89,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
-              <Link href= "/demandes">
+              <Link href= {`/demandes/${userId}`}>
                 <ListItemText primary="Mes demandes RH" />
               </Link>
               
@@ -95,8 +102,8 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <MailIcon />
               </ListItemIcon>
-              <Link href= "/UpdateUser">
-                <ListItemText primary="UpdateUser" />
+              <Link href= {`/UpdateUser/${userId}`}>
+                <ListItemText primary="Modifier votre profil" />
               </Link>
               
             </ListItemButton>

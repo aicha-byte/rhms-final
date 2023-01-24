@@ -52,17 +52,17 @@ axios.get(`http://localhost:5000/api/userProfile/${id}`).
 
       <br></br><br />
       <br></br><br />
-      <h1 className='TprofileUser'>Profiles</h1>
+      <h1 className='TprofileUser'>profile employé :</h1>
 
       <Stack direction="row" spacing={2}>
 
 
 
-        <Avatar
+        {/* <Avatar
           alt="Remy Sharp"
           src="https://img.freepik.com/vecteurs-libre/homme-affaires-caractere-avatar-isole_24877-60111.jpg?w=2000"
           sx={{ width: 80, height: 80, }}
-        />
+        /> */}
 
 
 
@@ -71,7 +71,7 @@ axios.get(`http://localhost:5000/api/userProfile/${id}`).
         <tr>
             <th>Image</th>
             <td>
-              <img src={user.image} alt='imgUser'/>
+              <img className='imgProfilUser'  src={`http://localhost:5000/static/${user.image}`} alt='imgUser'/>
             </td>
           </tr>
 
@@ -87,7 +87,7 @@ axios.get(`http://localhost:5000/api/userProfile/${id}`).
          
 
           <tr>
-            <th>FirstName</th>
+            <th>Prénom</th>
             <td>
 
               {user.firstName}
@@ -97,7 +97,7 @@ axios.get(`http://localhost:5000/api/userProfile/${id}`).
          
 
           <tr>
-            <th>LastName </th>
+            <th>Nom de famille</th>
             <td> {user.lastName}</td>
           </tr>
 
@@ -105,13 +105,14 @@ axios.get(`http://localhost:5000/api/userProfile/${id}`).
 
 
           <tr>
-            <th>Gender</th>
+            <th>Sexe</th>
             <td> {user.gender}</td>
           </tr>
 
           
           <tr>
-            <th>Date Of Birth</th>
+            <th>Date de naissance
+</th>
             <td>
             {user.dateOfBirth}
             </td>
@@ -119,7 +120,7 @@ axios.get(`http://localhost:5000/api/userProfile/${id}`).
 
 
           <tr>
-            <th>Date Of Join</th>
+            <th>Date d'adhésion</th>
             <td> {user.dateOfJoin}</td>
           </tr>
 
@@ -129,7 +130,7 @@ axios.get(`http://localhost:5000/api/userProfile/${id}`).
           </tr>
 
           <tr>
-            <th>Phone</th>
+            <th>Numéro de téléphone</th>
             <td>{user.phone}</td>
           </tr>
 
@@ -143,7 +144,7 @@ axios.get(`http://localhost:5000/api/userProfile/${id}`).
           </tr>
 
           <tr>
-            <th>Sold Of Leaves</th>
+            <th>Solde de Congé</th>
             <td>{user.soldOfLeaves}</td>
           </tr>
          

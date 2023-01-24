@@ -18,10 +18,10 @@ function App() {
         <Route path='/' element={<Login/>}></Route>
         <Route path='/ProfilUser/:id' element={<Home/>}></Route>
         <Route path='/ProfilUser/:id' element={<ProfilePages/>}></Route>
-        <Route path='/congé' element={<HolidaysPages/>}></Route>
+        <Route path='/congé/:id' element={<HolidaysPages/>}></Route>
         <Route path='/sortie' element={<AutorisationPage/>}></Route>
-        <Route path='/demandes' element={<MesDemandesPage/>}></Route>
-        <Route path='/UpdateUser' element={<UpdateUser/>}></Route>
+        <Route path='/demandes/:id' element={<MesDemandesPage/>}></Route>
+        <Route path='/UpdateUser/:id' element={<UpdateUser/>}></Route>
 
 
 
