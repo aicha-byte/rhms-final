@@ -66,7 +66,7 @@ async function uploadImg (e){
 
       <form  onSubmit={editUser} >
             <input  className='formUpdateUser' type='text' placeholder =' Prénom' onChange={(e)=>setUser({...user,firstName:e.target.value})}/>
-            <input  className='formUpdateUser' type='text' placeholder ='Nom de famille ' onChange={(e)=>setUser({...user,lasttName:e.target.value})}/>
+            <input  className='formUpdateUser' type='text' placeholder ='Nom de famille ' onChange={(e)=>setUser({...user,lastName:e.target.value})}/>
             <input  className='formUpdateUser'type='email' placeholder ='E-mail' onChange={(e)=>setUser({...user,email:e.target.value})}/>
             <input className='formUpdateUser' type='password' placeholder ='Mot de passe' onChange={(e)=>setUser({...user,password:e.target.value})}/>
             <input  className='formUpdateUser'type='tel' placeholder ='Numéro de téléphone' onChange={(e)=>setUser({...user,phone:e.target.value})}/>

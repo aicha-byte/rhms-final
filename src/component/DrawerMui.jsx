@@ -105,9 +105,22 @@ const userId=localStorage.getItem('userId')
               <Link href= {`/UpdateUser/${userId}`}>
                 <ListItemText primary="Modifier votre profil" />
               </Link>
-              
+            
             </ListItemButton>
           </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
+              <Link href= {`/mesDemandes/`}>
+                <ListItemText primary="demandesItem " />
+              </Link>
+            
+            </ListItemButton>
+          </ListItem>
+
         {/* {['Profile', 'Demande de congé ', 'Autorisation de sortie ', 'Mes demandes RH'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>

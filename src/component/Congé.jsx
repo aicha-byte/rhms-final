@@ -36,21 +36,21 @@ export default function Congé() {
   return (
     <div className='bodyCongé'>
 
-      <h3 className='TCongé'  >Demande de congé</h3>
-      <h5>leave type</h5>
+      <h3 className='TCongé'>Demande de congé</h3>
+      <h5 className='Pcongé'>Type de congé :</h5>
 <form onSubmit={addLeaveRequest}>
-        <input type='checkbox' value='congée annuelle' name='type'/>
+        <input className='formCongé' type='checkbox' value='congée annuelle' name='type'/>
         <label>congée annuelle</label>
-        <input type='checkbox' value='congée de maladie' name='type'/>
+        <input className='formCongé'type='checkbox' value='congée de maladie' name='type'/>
         <label>congée de maladie</label>
-        <input type='checkbox' value='télétravail' name='type'/>
+        <input className='formCongé'type='checkbox' value='télétravail' name='type'/>
         <label>télétravail</label><br></br>
 
-        <label>Start Date</label>
-        <input type='date' name='startDate'/><br/>
-        <label>End Date</label>
-        <input type='date' name='endDate'/><br></br>
-        <input type='submit' value="submit"/>
+        <label  className='Pcongé'>Date Début :</label>
+        <input className='formCongé'type='date' name='startDate'/><br/>
+        <label  className='Pcongé'>Date Fin :</label>
+        <input className='formCongé' type='date' name='endDate'/><br></br>
+        <input className='btnCongé' type='submit' value="Envoyé"/>
         </form>
 
     </div>

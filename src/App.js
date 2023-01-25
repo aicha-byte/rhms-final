@@ -7,6 +7,8 @@ import HolidaysPages from './Pages/HolidaysPages'
 import AutorisationPage from './Pages/AutorisationPages'
 import MesDemandesPage from './Pages/MesDemandesPages'
 import UpdateUser from './component/UpdateUser'
+import DemandeItem from './component/DemandeItem'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   
@@ -22,6 +24,8 @@ function App() {
         <Route path='/sortie' element={<AutorisationPage/>}></Route>
         <Route path='/demandes/:id' element={<MesDemandesPage/>}></Route>
         <Route path='/UpdateUser/:id' element={<UpdateUser/>}></Route>
+        <Route path='/mesDemandes/' element={<DemandeItem/>}></Route>
+
 
 
 

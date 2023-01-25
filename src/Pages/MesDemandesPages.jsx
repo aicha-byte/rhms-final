@@ -36,6 +36,7 @@ console.log({demande});
     <div>
          <Header />
          <h1 style={{paddingTop:'350px'}}>MesDemandes</h1>
+         <ul>
          {
           demande.map((elem,i)=>{
             return(
@@ -48,7 +49,7 @@ console.log({demande});
 
          }
 
-
+</ul>
     </div>
   )
 }

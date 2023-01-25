@@ -2,7 +2,7 @@ import { Alert, Button, Stack, TextField} from '@mui/material'
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../Login.css';
 
 
@@ -63,6 +63,7 @@ export default function Login() {
           helperText={Boolean(errors.password) && 'fill this field'}
           
         />
+        <Link href= {'#'}>Mot de passe oublié ? </Link>
       <Button type="submit" variant="contained">Submit</Button>
       </Stack>
 </form>
